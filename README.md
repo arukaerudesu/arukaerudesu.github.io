@@ -1,0 +1,2 @@
+# arukaerudesu.github.io
+Web
