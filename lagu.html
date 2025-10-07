@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <style>
+        body {
+            background-image: url('sancho.png');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            font-family: poppins, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 0;
+            box-sizing: border-box;
+            animation: fadeIn 2s forwards;
+            padding-top: 100px;
+        }
+
+        .chord {
+            color : #ffef23;
+            font-weight: bold;
+            animation: fadeIn 5s forwards;
+        }
+
+        pre {
+            white-space: pre;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  background: #a41c3e;
+  padding: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  animation: fadeIn 2s forwards;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  color: #3e2936;
+  display: flex;
+  animation: fadeIn 2s forwards;
+  font-weight: bold;
+  text-decoration: none;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+  
+.navbar a {
+  font-size: 14px;
+  color : #be9cab;
+  text-decoration: none;
+  font-weight: 100;
+  margin-left: 30px;
+  opacity: 0;
+  animation: fadeIn 5s forwards;
+}
+
+.navbar a:hover {
+  color: #3e2936;
+}
+
+.dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #333;
+      min-width: 150px;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .dropdown-content a:hover {
+      background: #444;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+    </style>
+</head>
+<body>
+    <!--Navbar-->
+  <header>
+    <div class="container nav">
+      <a href=index.html class="logo">CODENAME:Enigma</a>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About Me/aboutme.html">About</a>
+        <a href="Jadwal/jadwal.html">Schedule</a>
+        <a href="lagu.html">Favorite Songs</a>
+    <div class="dropdown">
+        <a href="#">Counts</a>
+        <div class="dropdown-content">
+          <a href="luas.html">Luas</a>
+          <a href="volume.html">Volume</a>
+        </div>
+  </header>
+
+    <pre>
+        [Verse 8]
+        <span class="chord">Cm</span>
+        Hero
+        <span class="chord">G7</span>           <span class="chord">D#</span>
+        On a plastic horse
+            <span class="chord">C</span>
+        Fighting like it's real
+        <span class="chord">Fm7</span>     <span class="chord">A#</span>           <span class="chord">D#</span>
+        With a cardboard sword
+
+        [Verse 9]
+        <span class="chord">G7</span> <span class="chord">Cm</span>
+        I Know
+          <span class="chord">G7</span>           <span class="chord">D#</span>        <span class="chord">C</span>
+        Successful or not, i am who i am
+        <span class="chord">Fm</span>        <span class="chord">D#</span>      <span class="chord">Ddim7</span>
+          I am my biggest fan
+                <span class="chord">Cm</span> <span class="chord">A#</span>    <span class="chord">G#</span>
+        I am my biggest fan
+                 <span class="chord">A#</span>          <span class="chord">G#</span>
+        I am my enemy and my friend
+
+        [Chorus] 
+        <span class="chord">Cm</span>
+        Hero
+              <span class="chord">G7</span>        <span class="chord">D#</span>        <span class="chord">C</span>
+        Gonna prove my version of justice
+        <span class="chord">G#</span>      <span class="chord">A#</span>          <span class="chord">D#</span>
+        Is more just than yours
+        <span class="chord">G7</span> <span class="chord">Cm</span>
+        Uno
+           <span class="chord">G7</span>              <span class="chord">D#</span>          <span class="chord">C</span>
+        Remaining on this stage, I am the only one
+
+        [Outro] 
+        <span class="chord">Fm</span>       <span class="chord">D#</span>      <span class="chord">Ddim7</span>
+          I am my biggest fan
+                <span class="chord">Cm</span> <span class="chord">A#</span>    <span class="chord">G#</span>
+        I am my biggest fan
+                 <span class="chord">A#</span>          <span class="chord">Cm</span>
+        I am my enemy and my friend
+    </pre>
+    
+</body>
+</html>
+

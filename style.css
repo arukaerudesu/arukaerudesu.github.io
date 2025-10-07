@@ -1,0 +1,173 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  background: #3e2936;
+  color: #a41c3e;
+  font-family: poppins, Arial, sans-serif;
+  padding-top: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #a41c3e;
+  padding: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  animation: fadeIn 2s forwards;
+  z-index: 1000;
+}
+
+.navbar a {
+  font-size: 14px;
+  color : #be9cab;
+  text-decoration: none;
+  font-weight: 100;
+  margin-left: 30px;
+  opacity: 0;
+  animation: fadeIn 5s forwards;
+}
+
+.navbar a:hover {
+  color: #3e2936;
+}
+
+.logo {
+  font-size: 22px;
+  color: #3e2936;
+  display: flex;
+  animation: fadeIn 2s forwards;
+  font-weight: bold;
+  text-decoration: none;
+  justify-content: flex-end;
+}
+
+.dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #333;
+      min-width: 150px;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .dropdown-content a:hover {
+      background: #444;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+.hero {
+  background-image: url("avemujika.png");
+  color: #a41c3e;
+  text-align: center;
+  padding: 60px 30px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 40px;
+  border-radius: 40px;
+  animation: fadeIn 4s forwards;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  color: #a41c3e;
+  text-decoration: none;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  animation: fadeIn 4s forwards;
+}
+
+  .hero p {
+  font-size: 18 px;
+  animation: fadeIn 4s forwards;
+}
+
+.hero:hover {
+  transform: translateY(-5px);
+}
+
+.blog {
+  padding: 50px 80px;
+  text-align: center;
+  animation: fadeIn 6s forwards;
+}
+
+.blog h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;       /* allow wrapping if screen is small */
+  justify-content: center; /* center the cards */
+  gap: 90px;
+  padding: 20px;
+  animation: fadeIn 8s forwards;
+}
+
+.card {
+  width: 300px;          /* fixed width for all cards */
+  height: 450px;         /* fixed height for consistency */
+  border-radius: 40px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(160, 0, 50, 0.7), rgba(209, 77, 114, 0.7));
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 80%;           /* fixed ratio for image area */
+  object-fit: cover;     /* prevents stretching */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 0;
+  padding: 1px;
+  color: #be9cab;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

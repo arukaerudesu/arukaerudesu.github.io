@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitung Volume Balok</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: poppins, sans-serif;
+      background: #3e2936;
+    }
+
+    /* Navbar */
+    header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #a41c3e;
+  padding: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  animation: fadeIn 2s forwards;
+}
+
+    .logo {
+  font-size: 22px;
+  color: #3e2936;
+  display: flex;
+  animation: fadeIn 2s forwards;
+  font-weight: bold;
+  text-decoration: none;
+  justify-content: flex-end;
+   margin-right: 100px;
+}
+
+  nav a {
+  font-size: 14px;
+  color : #be9cab;
+  text-decoration: none;
+  font-weight: 100;
+  margin-left: 30px;
+  animation: fadeIn 5s forwards;
+}
+
+    nav a:hover {
+      color: #ff4081;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #333;
+      min-width: 150px;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .dropdown-content a:hover {
+      background: #444;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Konten utama */
+    main {
+      padding-top: 100px; /* Supaya konten tidak ketiban navbar */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: #be9cab;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 500px;
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 20px;
+      color: #a41c3e;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #a41c3e;
+      color: #be9cab;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #3e2936;
+    }
+
+    #hasil {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #a41c3e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <a href="#" class="logo">CODENAME:Enigma</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About Me/aboutme.html">About</a>
+      <a href="Jadwal/jadwal.html">Schedule</a>
+      <a href="lagu.html">Favorite Songs</a>
+      <div class="dropdown">
+        <a href="#">Counts ▾</a>
+        <div class="dropdown-content">
+          <a href="luas.html">Luas</a>
+          <a href="volume.html">Volume</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Konten -->
+  <main>
+    <div class="card">
+      <h3>Hitung Volume Balok</h3>
+      <form id="volumeForm">
+        <div class="form-group">
+          <label for="panjang">Panjang</label>
+          <input type="number" id="panjang" placeholder="Masukkan panjang" required>
+        </div>
+        <div class="form-group">
+          <label for="lebar">Lebar</label>
+          <input type="number" id="lebar" placeholder="Masukkan lebar" required>
+        </div>
+        <div class="form-group">
+          <label for="tinggi">Tinggi</label>
+          <input type="number" id="tinggi" placeholder="Masukkan tinggi" required>
+        </div>
+        <button type="submit">Hitung</button>
+      </form>
+
+      <div id="hasil">-</div>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("volumeForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const panjang = parseFloat(document.getElementById("panjang").value);
+      const lebar = parseFloat(document.getElementById("lebar").value);
+      const tinggi = parseFloat(document.getElementById("tinggi").value);
+
+      if (panjang > 0 && lebar > 0 && tinggi > 0) {
+        const volume = panjang * lebar * tinggi;
+        document.getElementById("hasil").textContent = "Volume = " + volume + " satuan³";
+      } else {
+        document.getElementById("hasil").textContent = "Masukkan angka yang valid!";
+      }
+    });
+  </script>
+
+</body>
+</html>
